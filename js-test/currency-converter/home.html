@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="from-country">
+        <label for="amount">Enter Amount</label>
+        <input type="text" placeholder="Enter Amount" id="amount">
+        
+
+<div class="wrapper">
+    <label for="countriesList">From:</label>
+    <select class="custom-dropdown" name="countriesList" id="countriesList" >
+
+    </select>
+
+    <label for="countriesList2">To:</label>
+    <select class="custom-dropdown2" name="countriesList2" id="countriesList2" >
+
+    </select>
+
+
+    
+</div>
+
+<div>
+    <button onclick="compute()" type="submit">Submit</button>
+</div>
+
+<div class="answer">
+    <h3 id="output">answer</h3>
+</div>
+       
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- Write​ ​ a ​ ​ JavaScript​ ​ function​ ​ to​ ​ get​ ​the​ ​ first​ ​ and​ ​ last​ ​ element​ ​ of​ ​ an​ ​ array.​ ​ Passing​ ​ a parameter​ ​ 'n'​ ​ will​ ​ return​ ​ the​ ​ first​ ​ 'n'​ ​ elements​ ​ of​ ​ the​ ​ array​ ​ and​ ​last​ ​ ‘n’​ ​ elements​ ​ of​ ​ the array. -->
+
+<!-- static_array = [0,1,2,3,4,5,6,7,8,9]
+Input = 3
+Output = First 3 element : [0,1,2,] , Last 3 element : [7,8,9] -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+        static_array = [0,1,2,3,4,5,6,7,8,9];
+        let num = prompt("Enter a number");
+        let first3Elements = [];
+        let last3Elements = [];
+        
+        let i ;
+        if(num>static_array.length){
+            alert("Number Too large");
+        }
+
+        else{
+            for(i=0;i<num;i++){
+                first3Elements.push(static_array[i]);
+            }
+            let endIndex = static_array.length - num;
+            console.log(endIndex);
+            for(i=endIndex;i<static_array.length;i++){
+                last3Elements.push(static_array[i]);
+            }
+            console.log(first3Elements);
+            console.log(last3Elements);
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+table {
+    border-collapse: collapse;
+    width: 300px;
+    height: 300px;
+  }
+  
+  td, th {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 36px;
+    cursor: pointer;
+  }
+  
+  .cell {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  tr:first-child .cell{
+    border-top: none;
+  }
+
+  tr .cell:first-child{
+    border-left:none;
+  }
+  
+  tr:last-child .cell {
+    border-bottom: none;
+    
+  }
+  
+  tr .cell:last-child {
+    border-right: none;
+  }

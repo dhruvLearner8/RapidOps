@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+function manipulateArray(arr){
+    const operation = prompt("Enter 'delete' or 'insert' ");
+    if(operation == 'delete'){
+        const deletePosition = prompt("Enter position to be deleted");
+        if(deletePosition>=1 && deletePosition<arr.length){
+            arr.splice(deletePosition-1,1);
+            console.log(arr);
+        }
+        
+    }
+    if(operation == 'insert'){
+        const insertPosition = prompt("Enter position to be inserted");
+        if(insertPosition>=1 && insertPosition<arr.length){
+            const name = prompt("Enter Name");
+            const age = prompt("Enter age");
+            const newObject = {name:name,age:age};
+            arr.splice(insertPosition-1,0,newObject)
+            console.log(arr);
+        }
+    }
+}
+
+
+// Example static array
+const static_array = [
+  { name: "Jack", age: 23 },
+  { name: "Sam", age: 12 },
+  { name: "Max", age: 20 }
+];
+
+// Manipulate the array
+manipulateArray(static_array);
+
+
+        
+    </script>
+</body>
+</html>

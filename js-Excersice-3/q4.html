@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Table Generator</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Dynamic Table Generator</h2>
+  <form id="tableForm">
+    <label for="rowsInput">Number of Rows:</label>
+    <input type="number" id="rowsInput" min="1" required><br>
+    <label for="columnsInput">Number of Columns:</label>
+    <input type="number" id="columnsInput" min="1" required><br>
+    <button type="submit">Generate Table</button>
+  </form>
+
+  <div id="tableContainer"></div>
+
+  <script>
+    document.getElementById('tableForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var rows = parseInt(document.getElementById('rowsInput').value);
+      var columns = parseInt(document.getElementById('columnsInput').value);
+      generateTable(rows, columns);
+    });
+
+    function generateTable(rows, columns) {
+      var tableContainer = document.getElementById('tableContainer');
+      tableContainer.innerHTML = ''; // Clear existing table, if any
+
+      var table = document.createElement('table');
+
+      for (var i = 0; i < rows; i++) {
+        var row = document.createElement('tr');
+
+        for (var j = 0; j < columns; j++) {
+          var cell = document.createElement('td');
+          var cellText = document.createTextNode('Row ' + (i + 1) + ', Column ' + (j + 1));
+          cell.appendChild(cellText);
+          row.appendChild(cell);
+        }
+
+        table.appendChild(row);
+      }
+
+      tableContainer.appendChild(table);
+    }
+  </script>
+</body>
+</html>
